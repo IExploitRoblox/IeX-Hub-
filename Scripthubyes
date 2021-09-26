@@ -1,0 +1,363 @@
+--Welcome to IeX Hub it my first try making Roblox exploit GUI so have fun?--
+
+--{Game Support = The Legendary Sword RPG , More coming soon..}--
+
+-- -----------                     \    /
+--      |           ________        \  /
+--      |          /        \        \/
+--      |          |_________|       /\
+--      |          \                /  \
+-- -----------      \________/     /    \    
+
+
+local char = game.Players.LocalPlayer.Character
+local hum = char:WaitForChild("Humanoid")
+local humrp = char.HumanoidRootPart
+
+
+if game.PlaceId == 60654525 then
+        local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+        local Window = Library.CreateLib("The Legendary Sword RPG - IeX Hub", "Midnight")
+    
+        --Main
+        local Main = Window:NewTab("Main")
+        local MainSection = Main:NewSection("Main")
+    
+        MainSection:NewButton("Get best sword", "Get the best sword in the game", function()       
+            game.Players.LocalPlayer.RemoteFunctions.SwordShopSystem:FireServer("Buy", 0,"The Devil's Blade")
+        end)
+    
+        MainSection:NewButton("Infinite money", "Get unlimited money", function()        
+            game.Players.LocalPlayer.RemoteFunctions.SwordShopSystem:FireServer("Sell", 1000000000,"Bronze")
+        end)
+    
+        --Stats
+        local Stats = Window:NewTab("Stats")
+        local StatsSection = Stats:NewSection("Stats")
+    
+        StatsSection:NewButton("Auto Health", "Auto use point on health", function()
+                local A_1 = "Health"
+                local Event = game:GetService("Players").LocalPlayer.RemoteFunctions.UpgradeFunction
+                Event:FireServer(A_1)
+        end)
+        StatsSection:NewButton("Auto damage", "Auto use point on damage", function()
+                local A_1 = "Damage"
+                local Event = game:GetService("Players").LocalPlayer.RemoteFunctions.UpgradeFunction
+                Event:FireServer(A_1)
+        end)
+        StatsSection:NewButton("Auto defense (go over limit)", "Bypass limit make you get hp instand of damage", function()
+    
+                local A_1 = "Defense"
+                local Event = game:GetService("Players").LocalPlayer.RemoteFunctions.UpgradeFunction
+                Event:FireServer(A_1)
+        end)
+        StatsSection:NewButton("Auto gold gained", "Pretty useless cant you got like 500m", function()
+                local A_1 = "Loot"
+                local Event = game:GetService("Players").LocalPlayer.RemoteFunctions.UpgradeFunction
+                Event:FireServer(A_1)
+        end)
+    
+        --Player
+        local Player = Window:NewTab("Player")
+        local PlayerSection = Player:NewSection("Player")
+    
+        PlayerSection:NewSlider("Walkspeed", "Changes the walkspeed", 250, 16, function(v)
+                game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+        end)
+        PlayerSection:NewSlider("Jumppower", "Changes the jumppower", 250, 50, function(v)
+                game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+        end)
+        
+        --Others
+    
+        local Others = Window:NewTab("Others")
+        local OthersSection = Others:NewSection("Others")
+    
+        OthersSection:NewButton("Max Rebirth", "Get Max Rebirth", function()
+                game.Players.LocalPlayer.RemoteFunctions.RebirthFunction:FireServer("25")
+        end)
+        OthersSection:NewButton("100 Rebirth", "Get 100 rebirth now people sus of you", function()
+                game.Players.LocalPlayer.RemoteFunctions.RebirthFunction:FireServer("100")
+        end)
+    end
+if game.PlaceId == 413053960 then
+        local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+        local Window = Library.CreateLib("The Legendary Sword RPG 2", "Midnight")
+        
+        --Main
+        local Main = Window:NewTab("Main")
+        local MainSection = Main:NewSection("Main")
+        
+        MainSection:NewButton("Get best sword", "Get the best sword from what i known so far", function()
+                local A_1 = "Buy"
+                local A_2 = "Shards"
+                local A_3 = 0
+                local A_4 = "Flaming Halberd"
+                local Event = game:GetService("Players")["LocalPlayer"].RemoteFunctions.SwordSystem
+                Event:FireServer(A_1, A_2, A_3, A_4)
+            end)
+
+        MainSection:NewButton("Get bronze", "item you need to 1 billion script", function()
+                local A_1 = "Buy"
+                local A_2 = "Gold"
+                local A_3 = 0
+                local A_4 = "Bronze"
+                local Event = game:GetService("Players")["LocalPlayer"].RemoteFunctions.SwordSystem
+                Event:FireServer(A_1, A_2, A_3, A_4)
+        end)
+
+        MainSection:NewButton("inf 1 billion shards", "Get inf shards", function()
+                local A_1 = "Sell"
+                local A_2 = "Shards"
+                local A_3 = 1000000000
+                local A_4 = "Bronze"
+                local Event = game:GetService("Players")["LocalPlayer"].RemoteFunctions.SwordSystem
+                Event:FireServer(A_1, A_2, A_3, A_4)
+            end)
+
+        MainSection:NewButton("Get 1 billion gold", "if it to much people will sus at you and it feel weird", function()
+                local A_1 = "Sell"
+                local A_2 = "Gold"
+                local A_3 = 1000000000
+                local A_4 = "Bronze"
+                local Event = game:GetService("Players")["LocalPlayer"].RemoteFunctions.SwordSystem
+                Event:FireServer(A_1, A_2, A_3, A_4)
+            end)
+
+        MainSection:NewButton("Loop upgrade sword", "Loop upgrade sword while holding the sword", function()
+                while wait() do
+                        local A_1 = "UpgradeValue"
+                        local A_2 = ""
+                        local A_3 = 0
+                        local A_4 = 0
+                        local A_5 = ""
+                        local Event = game:GetService("Players")["LocalPlayer"].RemoteFunctions.WepSystem
+                        Event:FireServer(A_1, A_2, A_3, A_4, A_5)
+                end
+            end)   
+        
+        --Stats
+        local Stats = Window:NewTab("Stats")
+        local StatsSection = Stats:NewSection("Stats")
+        
+        StatsSection:NewButton("1 billion Strength", "Set strength to 1 billion", function()
+
+                local A_1 = "Strength"
+                local A_2 = "All"
+                local A_3 = 1000000000
+                local A_4 = 0
+                local Event = game:GetService("Players")["LocalPlayer"].RemoteFunctions["UR_ANTIHACK"]
+                Event:FireServer(A_1, A_2, A_3, A_4)
+
+        end)
+
+        StatsSection:NewButton("1 billion loot", "Set loot to 1 billion", function()
+
+                local A_1 = "Loot"
+                local A_2 = "All"
+                local A_3 = 1000000000
+                local A_4 = 0
+                local Event = game:GetService("Players")["LocalPlayer"].RemoteFunctions["UR_ANTIHACK"]
+                Event:FireServer(A_1, A_2, A_3, A_4)
+
+        end)
+
+        StatsSection:NewButton("1 billion health", "Set health to 1 billion", function()
+
+                local A_1 = "Health"
+                local A_2 = "All"
+                local A_3 = 1000000000
+                local A_4 = 0
+                local Event = game:GetService("Players")["LocalPlayer"].RemoteFunctions["UR_ANTIHACK"]
+                Event:FireServer(A_1, A_2, A_3, A_4)
+
+        end)
+        
+        
+        
+            --Player
+        local Player = Window:NewTab("Player")
+        local PlayerSection = Player:NewSection("Player")
+
+        PlayerSection:NewSlider("WalkSpeed", "Change walkspeed", 250, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+                game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+            end)
+
+        PlayerSection:NewSlider("JumpPower", "Change jumppower", 250, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+                game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+            end) 
+
+        --Settings
+        local Settings = Window:NewTab("Settings")
+        local SettingsSection = Settings:NewSection("Settings")
+
+        SettingsSection:NewKeybind("ToggleUI", "ToggleUI keybind", Enum.KeyCode.RightControl, function()
+                Library:ToggleUI()
+        end)
+
+elseif game.PlaceId == 2986677229 then
+        local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+        local Window = Library.CreateLib("The Legendary Sword RPG - IeX Hub", "Midnight")
+            
+        --Main
+        local Main = Window:NewTab("Main")
+        local MainSection = Main:NewSection("Main")
+            
+        MainSection:NewToggle("Auto exp", "Auto farm exp", function(state)
+                if state then
+                        getgenv().expfarm = true;
+                        while getgenv().expfarm == true do
+                        local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.GameService.WeaponAttackStart
+                        Event:FireServer()
+                    wait()
+                        local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.GameService.WeaponAnimComplete
+                        Event:FireServer()
+                        end
+                else
+                        getgenv().expfarm = false;
+                        while getgenv().expfarm == true do
+                        local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.GameService.WeaponAttackStart
+                        Event:FireServer()
+                    wait()
+                        local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.GameService.WeaponAnimComplete
+                        Event:FireServer()   
+                        end            
+                end
+        end)
+
+        MainSection:NewToggle("Auto open lvl crate", "Auto open crate that got upon lvl up", function(state)
+                if state then
+                getgenv().autocrate = true;
+                        while getgenv().autocrate == true do
+                        local A_1 = "t1_wpn_crate"
+                        local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.GameService.OpenCrate
+                        Event:InvokeServer(A_1)
+                                wait()
+                        local A_1 = "t1_skin_crate"
+                        local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.GameService.OpenCrate
+                        Event:InvokeServer(A_1)
+                        wait()
+                        end
+
+                else
+                getgenv().autocrate = false;
+                        while getgenv().autocrate == true do
+                        local A_1 = "t1_wpn_crate"
+                        local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.GameService.OpenCrate
+                        Event:InvokeServer(A_1)
+                                wait()
+                        local A_1 = "t1_skin_crate"
+                        local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.GameService.OpenCrate
+                        Event:InvokeServer(A_1)
+                        wait()
+                        end
+                end
+        end)
+
+elseif game.PlaceId == 3956818381 then
+        local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+        local Window = Library.CreateLib("Ninja Legend - IeX Hub", "Midnight")
+            
+        --Main
+        local Main = Window:NewTab("Main")
+        local MainSection = Main:NewSection("Main")
+
+        MainSection:NewToggle("Auto swing", "auto swing sword", function(state)
+        if state then
+        getgenv().autoswing = true;
+                while getgenv().autoswing == true do
+                        local A_1 = "swingKatana"
+                        local Event = game:GetService("Players").LocalPlayer.ninjaEvent
+                        Event:FireServer(A_1)
+                        wait(0.1)
+                end
+        else
+        getgenv().autoswing = false;
+                while getgenv().autoswing == true do
+                        local A_1 = "swingKatana"
+                        local Event = game:GetService("Players").LocalPlayer.ninjaEvent
+                        Event:FireServer(A_1)
+                        wait(0.1)
+                end
+        end
+    end) 
+
+
+elseif game.PlaceId == 3652625463 then
+        local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+        local Window = Library.CreateLib("Lifting Simulator - IeX Hub", "Midnight")
+
+        --Main
+        local Main = Window:NewTab("Main")
+        local MainSection = Main:NewSection("Main")
+
+	MainSection:NewToggle("Auto lifting", "Auto farm muscle", function(state)
+        if state then
+		getgenv().autoclick = true;
+		while getgenv().autoclick == true do
+		local ohTable1 = {
+			[1] = "GainMuscle"
+		}
+		
+		game:GetService("ReplicatedStorage").RemoteEvent:FireServer(ohTable1)
+		   wait()
+		end
+        else
+		getgenv().autoclick = false;
+		while getgenv().autoclick == true do
+			local ohTable1 = {
+			[1] = "GainMuscle"
+			}
+		
+			game:GetService("ReplicatedStorage").RemoteEvent:FireServer(ohTable1)
+		   wait()
+                        end            
+                end
+        end)
+
+        MainSection:NewToggle("Auto sell", "Auto sell muscle into cash", function(state)
+        if state then
+                getgenv().autosell = true;
+                while getgenv().autosell == true do
+                        local ohTable1 = {
+                                [1] = "SellMuscle"
+                        }
+                        
+                        game:GetService("ReplicatedStorage").RemoteEvent:FireServer(ohTable1)
+                wait()
+                end
+        else
+                getgenv().autosell = false;
+                while getgenv().autosell == true do
+                        local ohTable1 = {
+                                [1] = "SellMuscle"
+                        }
+                        
+                        game:GetService("ReplicatedStorage").RemoteEvent:FireServer(ohTable1)
+                wait()
+                
+                        end
+                end
+        end)
+
+        --Teleport
+        local Teleport = Window:NewTab("Teleport")
+        local TeleportSection = Teleport:NewSection("Teleport")
+
+        TeleportSection:NewButton("Goto Shop", "tp to shop", function()       
+                humrp.CFrame = game:GetService("Workspace").EffectStorage.Mark02.CFrame
+        end) 
+
+        TeleportSection:NewButton("More soon", "...", function()       
+                print("Nothing happen")
+        end) 
+
+        --More Soon
+        local MoreSoon = Window:NewTab("MoreSoon")
+        local MoreSoonSection = MoreSoon:NewSection("MoreSoon")
+
+        MoreSoonSection:NewButton("More Soon","...", function()
+                print("Nothing happen")
+        end)
+
+end
